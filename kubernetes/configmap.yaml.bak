@@ -1,0 +1,10 @@
+--from-literal=ZONE=default.svc.cluster.local 
+--from-literal=ADDITIONAL_SHARED_CONFIG="hss_realm=ivc.iot1.com
+home_domain=ivc.iot1.com
+sub_max_expires=3600
+default_session_expires=3600
+max_session_expires=3600
+enum_server=10.12.0.6,10.12.100.6
+enum_suffix=.iot1.com
+reg_max_expires=3600
+default_session_expires=3600"

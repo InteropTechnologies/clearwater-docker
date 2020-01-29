@@ -1,0 +1,21 @@
+--- /usr/share/clearwater/bin/generic_create_diameterconf-orig	2019-11-01 15:59:59.124193562 +0000
++++ /usr/share/clearwater/bin/generic_create_diameterconf	2019-11-01 16:00:54.700742328 +0000
+@@ -24,8 +24,9 @@
+ acl_required=$6
+ check_dh=$7
+ tw_timer=$8
++listen_on=$9
+ 
+-if [[ $# != 8 ]]
++if [[ $# != 9 ]]
+ then
+     # Usage message to stderr
+     echo -e $usage >&2
+@@ -129,6 +130,7 @@
+ 
+ Port = $port;
+ SecPort = $sec_port;
++ListenOn= "$listen_on";
+ 
+ # TLS configuration
+ TLS_Cred = "$key_dir/cert.pem", "$key_dir/privkey.pem";

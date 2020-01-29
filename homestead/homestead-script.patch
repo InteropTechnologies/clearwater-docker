@@ -1,0 +1,10 @@
+--- /usr/share/clearwater/infrastructure/scripts/homestead-orig	2019-11-01 15:56:27.976308693 +0000
++++ /usr/share/clearwater/infrastructure/scripts/homestead	2019-11-01 15:56:44.494769121 +0000
+@@ -39,5 +39,5 @@
+   # Strip any characters not valid in an FQDN out of hs_hostname (for
+   # example, it might be an IPv6 address)
+   realm=$(echo $hs_hostname | sed -e 's/:[^:]*$//g' | sed -e 's/^\[//g' | sed -e 's/\]$//g')
+-  /usr/share/clearwater/bin/generic_create_diameterconf homestead $identity $realm $hs_listen_port $hs_secure_listen_port $acl_required $check_destination_host $homestead_diameter_watchdog_timer
++  /usr/share/clearwater/bin/generic_create_diameterconf homestead $identity $realm $hs_listen_port $hs_secure_listen_port $acl_required $check_destination_host $homestead_diameter_watchdog_timer $local_ip
+ fi
+
